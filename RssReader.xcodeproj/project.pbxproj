@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7029E92849196ABDEA941E /* Pods_RssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA2F1F1CA1A85C73364163C /* Pods_RssReader.framework */; };
 		EC535CAB1DA6170F00FB8DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC535CAA1DA6170F00FB8DBB /* AppDelegate.swift */; };
 		EC535CAD1DA6170F00FB8DBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC535CAC1DA6170F00FB8DBB /* ViewController.swift */; };
-		EC535CB01DA6170F00FB8DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC535CAE1DA6170F00FB8DBB /* Main.storyboard */; };
 		EC535CB21DA6170F00FB8DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC535CB11DA6170F00FB8DBB /* Assets.xcassets */; };
 		EC535CB51DA6170F00FB8DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC535CB31DA6170F00FB8DBB /* LaunchScreen.storyboard */; };
+		EC7450501DA61C72002A97F9 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74504F1DA61C72002A97F9 /* BookmarkViewController.swift */; };
+		EC7450521DA62296002A97F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7450511DA62296002A97F9 /* Main.storyboard */; };
+		EC7450541DA62605002A97F9 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7450531DA62605002A97F9 /* Bookmark.swift */; };
 		EC9243551DA617C0001D891E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9243511DA617C0001D891E /* Item.swift */; };
 		EC9243561DA617C0001D891E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9243521DA617C0001D891E /* ListViewController.swift */; };
 		EC9243571DA617C0001D891E /* setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9243531DA617C0001D891E /* setting.swift */; };
@@ -19,13 +22,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A8DF7538723AE9DFBF506AD /* Pods-RssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.debug.xcconfig"; sourceTree = "<group>"; };
+		93A8E16C420D78E74E6AD547 /* Pods-RssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RssReader/Pods-RssReader.release.xcconfig"; sourceTree = "<group>"; };
+		DEA2F1F1CA1A85C73364163C /* Pods_RssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC535CA71DA6170E00FB8DBB /* RssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC535CAA1DA6170F00FB8DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC535CAC1DA6170F00FB8DBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC535CAF1DA6170F00FB8DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC535CB11DA6170F00FB8DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC535CB41DA6170F00FB8DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC535CB61DA6170F00FB8DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC74504F1DA61C72002A97F9 /* BookmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		EC7450511DA62296002A97F9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EC7450531DA62605002A97F9 /* Bookmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		EC9243511DA617C0001D891E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC9243521DA617C0001D891E /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EC9243531DA617C0001D891E /* setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setting.swift; sourceTree = "<group>"; };
@@ -37,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7029E92849196ABDEA941E /* Pods_RssReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59B32CBFC87FA192BB8220C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEA2F1F1CA1A85C73364163C /* Pods_RssReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E178CBED82479CE3EE216E71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A8DF7538723AE9DFBF506AD /* Pods-RssReader.debug.xcconfig */,
+				93A8E16C420D78E74E6AD547 /* Pods-RssReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC535C9E1DA6170E00FB8DBB = {
 			isa = PBXGroup;
 			children = (
 				EC535CA91DA6170E00FB8DBB /* RssReader */,
 				EC535CA81DA6170E00FB8DBB /* Products */,
+				E178CBED82479CE3EE216E71 /* Pods */,
+				59B32CBFC87FA192BB8220C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +96,12 @@
 				EC9243531DA617C0001D891E /* setting.swift */,
 				EC535CAA1DA6170F00FB8DBB /* AppDelegate.swift */,
 				EC535CAC1DA6170F00FB8DBB /* ViewController.swift */,
-				EC535CAE1DA6170F00FB8DBB /* Main.storyboard */,
 				EC535CB11DA6170F00FB8DBB /* Assets.xcassets */,
+				EC7450511DA62296002A97F9 /* Main.storyboard */,
 				EC535CB31DA6170F00FB8DBB /* LaunchScreen.storyboard */,
 				EC535CB61DA6170F00FB8DBB /* Info.plist */,
+				EC74504F1DA61C72002A97F9 /* BookmarkViewController.swift */,
+				EC7450531DA62605002A97F9 /* Bookmark.swift */,
 			);
 			path = RssReader;
 			sourceTree = "<group>";
@@ -83,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC535CB91DA6170F00FB8DBB /* Build configuration list for PBXNativeTarget "RssReader" */;
 			buildPhases = (
+				E611BCDD6617FE65F141C930 /* [CP] Check Pods Manifest.lock */,
 				EC535CA31DA6170E00FB8DBB /* Sources */,
 				EC535CA41DA6170E00FB8DBB /* Frameworks */,
 				EC535CA51DA6170E00FB8DBB /* Resources */,
+				BF5FC818C21120ED47569D3C /* [CP] Embed Pods Frameworks */,
+				31AAFD0BF3EE32F48A89092F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,13 +169,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7450521DA62296002A97F9 /* Main.storyboard in Resources */,
 				EC535CB51DA6170F00FB8DBB /* LaunchScreen.storyboard in Resources */,
 				EC535CB21DA6170F00FB8DBB /* Assets.xcassets in Resources */,
-				EC535CB01DA6170F00FB8DBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31AAFD0BF3EE32F48A89092F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssReader/Pods-RssReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF5FC818C21120ED47569D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RssReader/Pods-RssReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E611BCDD6617FE65F141C930 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC535CA31DA6170E00FB8DBB /* Sources */ = {
@@ -152,23 +233,17 @@
 				EC535CAD1DA6170F00FB8DBB /* ViewController.swift in Sources */,
 				EC9243571DA617C0001D891E /* setting.swift in Sources */,
 				EC9243551DA617C0001D891E /* Item.swift in Sources */,
+				EC7450501DA61C72002A97F9 /* BookmarkViewController.swift in Sources */,
 				EC92435A1DA618B5001D891E /* DetailViewController.swift in Sources */,
 				EC9243561DA617C0001D891E /* ListViewController.swift in Sources */,
 				EC535CAB1DA6170F00FB8DBB /* AppDelegate.swift in Sources */,
+				EC7450541DA62605002A97F9 /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC535CAE1DA6170F00FB8DBB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC535CAF1DA6170F00FB8DBB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC535CB31DA6170F00FB8DBB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -273,10 +348,12 @@
 		};
 		EC535CBA1DA6170F00FB8DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A8DF7538723AE9DFBF506AD /* Pods-RssReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8R72JGKT7T;
 				INFOPLIST_FILE = RssReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hanga.RssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,10 +363,12 @@
 		};
 		EC535CBB1DA6170F00FB8DBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A8E16C420D78E74E6AD547 /* Pods-RssReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8R72JGKT7T;
 				INFOPLIST_FILE = RssReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hanga.RssReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

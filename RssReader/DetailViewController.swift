@@ -6,8 +6,9 @@
 //  Copyright © 2016年 hanga-. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 import UIKit
+
 
 class DetailViewContoller: UIViewController {
     
@@ -25,4 +26,20 @@ class DetailViewContoller: UIViewController {
             webView.loadRequest(request)
         }
     }
-}
+    @IBAction func addBookmark(_ sender: AnyObject) {
+        guard let i = item else {
+            return
+        }
+        
+        let bookmark = Bookmark()
+        bookmark.title = i.title
+        bookmark.detail = i.detail
+        bookmark.link = i.link
+        bookmark.date = NSDate()
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(bookmark)
+        }
+    }
+}    

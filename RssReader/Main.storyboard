@@ -10,17 +10,17 @@
         <!--一覧-->
         <scene sceneID="GKw-NY-orb">
             <objects>
-                <tableViewController id="Wfu-dG-xv8" customClass="ListViewController" customModule="RSSredre" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Wfu-dG-xv8" customClass="ListViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="W7g-V0-EAD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewCell" id="Fjr-TL-v7X" customClass="ListViewCell" customModule="RSSredre" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewCell" id="Fjr-TL-v7X" customClass="ListViewCell" customModule="RssReader" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fjr-TL-v7X" id="ofh-Ac-Fcw">
-                                    <frame key="frameInset" width="375" height="89"/>
+                                    <frame key="frameInset" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8f-vh-prd">
@@ -65,24 +65,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDj-Ju-Zfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851.5" y="-427.5"/>
+            <point key="canvasLocation" x="761" y="-1015"/>
         </scene>
         <!--Detail View Contoller-->
         <scene sceneID="Qdy-N6-qs3">
             <objects>
-                <viewController id="4iP-06-h3d" customClass="DetailViewContoller" customModule="RSSredre" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4iP-06-h3d" customClass="DetailViewContoller" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
                     <webView key="view" contentMode="scaleToFill" id="ENn-n2-aML">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </webView>
+                    <navigationItem key="navigationItem" id="eQ1-1u-3lV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="own-GX-5au">
+                            <connections>
+                                <action selector="addBookmark:" destination="4iP-06-h3d" id="vPD-GS-lvb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="ENn-n2-aML" id="zX7-dw-Z1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6V-hd-Avb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="-422"/>
+            <point key="canvasLocation" x="1666" y="-583"/>
+        </scene>
+        <!--ブックマーク-->
+        <scene sceneID="St5-0o-rby">
+            <objects>
+                <tableViewController id="bth-tN-sGO" customClass="BookmarkViewController" customModule="RssReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1QH-QY-S7I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkViewCell" textLabel="N38-OC-rnW" style="IBUITableViewCellStyleDefault" id="yzZ-on-QPD">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yzZ-on-QPD" id="9mN-ZL-UiQ">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N38-OC-rnW">
+                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4iP-06-h3d" kind="show" id="0VW-78-61z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bth-tN-sGO" id="W4H-e9-3PB"/>
+                            <outlet property="delegate" destination="bth-tN-sGO" id="KJp-ZM-g5g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ブックマーク" id="dYA-OV-C6d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekW-xq-gCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="-82"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ufU-CI-Lsb">
@@ -95,11 +143,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="fGj-Ml-VqE" kind="relationship" relationship="viewControllers" id="G0k-48-AXs"/>
+                        <segue destination="5ZP-f6-30n" kind="relationship" relationship="viewControllers" id="GGZ-we-MmK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DH-LC-23L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1609" y="-422"/>
+            <point key="canvasLocation" x="-1252" y="-583"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ew4-Gn-AaZ">
@@ -118,7 +167,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3W-6l-clf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82.400000000000006" y="-422.33883058470769"/>
+            <point key="canvasLocation" x="-255" y="-1015"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rJF-4y-QWa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ZP-f6-30n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="2jj-8l-1rT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLz-Rz-IoX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bth-tN-sGO" kind="relationship" relationship="rootViewController" id="nYB-I6-atm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a93-z3-Sp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="-82"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0VW-78-61z"/>
+    </inferredMetricsTieBreakers>
 </document>
