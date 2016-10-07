@@ -20,12 +20,12 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fjr-TL-v7X" id="ofh-Ac-Fcw">
-                                    <frame key="frameInset" width="375" height="90"/>
+                                    <frame key="frameInset" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8f-vh-prd">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="nzR-ye-gcp"/>
+                                                <constraint firstAttribute="height" constant="22" id="W6A-9g-mHq"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -36,19 +36,28 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-Ys-iC4">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="1ei-WB-spH"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="z8f-vh-prd" firstAttribute="trailing" secondItem="ofh-Ac-Fcw" secondAttribute="trailingMargin" id="1Z6-j2-lv9"/>
-                                        <constraint firstItem="z8f-vh-prd" firstAttribute="leading" secondItem="ofh-Ac-Fcw" secondAttribute="leadingMargin" id="3Rv-Tc-3cU"/>
-                                        <constraint firstItem="z8f-vh-prd" firstAttribute="leading" secondItem="X3Z-o8-WTT" secondAttribute="leading" id="Iyg-vB-ctm"/>
-                                        <constraint firstAttribute="bottom" secondItem="X3Z-o8-WTT" secondAttribute="bottom" id="SQg-nM-XXu"/>
-                                        <constraint firstItem="z8f-vh-prd" firstAttribute="top" secondItem="ofh-Ac-Fcw" secondAttribute="top" id="lf8-ja-yKW"/>
-                                        <constraint firstItem="z8f-vh-prd" firstAttribute="trailing" secondItem="X3Z-o8-WTT" secondAttribute="trailing" id="otE-GP-Rmj"/>
-                                        <constraint firstItem="X3Z-o8-WTT" firstAttribute="top" secondItem="z8f-vh-prd" secondAttribute="bottom" constant="8" symbolic="YES" id="xvo-Ds-mb7"/>
+                                        <constraint firstItem="j1Y-Ys-iC4" firstAttribute="centerY" secondItem="ofh-Ac-Fcw" secondAttribute="centerY" id="LKe-BY-v6D"/>
+                                        <constraint firstItem="z8f-vh-prd" firstAttribute="leading" secondItem="X3Z-o8-WTT" secondAttribute="leading" id="Pp2-dH-KMA"/>
+                                        <constraint firstItem="X3Z-o8-WTT" firstAttribute="top" secondItem="z8f-vh-prd" secondAttribute="bottom" constant="8" symbolic="YES" id="S4P-qv-4Qo"/>
+                                        <constraint firstItem="z8f-vh-prd" firstAttribute="top" secondItem="j1Y-Ys-iC4" secondAttribute="top" id="Shg-4F-5rE"/>
+                                        <constraint firstItem="j1Y-Ys-iC4" firstAttribute="leading" secondItem="X3Z-o8-WTT" secondAttribute="trailing" constant="8" symbolic="YES" id="T69-au-kje"/>
+                                        <constraint firstItem="j1Y-Ys-iC4" firstAttribute="trailing" secondItem="ofh-Ac-Fcw" secondAttribute="trailingMargin" id="aje-Iu-tvn"/>
+                                        <constraint firstItem="z8f-vh-prd" firstAttribute="top" secondItem="ofh-Ac-Fcw" secondAttribute="top" id="ddf-2b-n2E"/>
+                                        <constraint firstItem="z8f-vh-prd" firstAttribute="leading" secondItem="ofh-Ac-Fcw" secondAttribute="leadingMargin" id="diQ-7O-Ql9"/>
+                                        <constraint firstAttribute="bottom" secondItem="X3Z-o8-WTT" secondAttribute="bottom" id="i8Y-1e-vFo"/>
+                                        <constraint firstItem="j1Y-Ys-iC4" firstAttribute="leading" secondItem="z8f-vh-prd" secondAttribute="trailing" constant="8" symbolic="YES" id="qr5-Il-Z75"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="X3Z-o8-WTT" id="Bx8-ec-MZW"/>
+                                    <outlet property="thumbnail" destination="j1Y-Ys-iC4" id="iwH-Hu-2mC"/>
                                     <outlet property="titleLabel" destination="z8f-vh-prd" id="eEG-Xq-Ycg"/>
                                     <segue destination="4iP-06-h3d" kind="show" id="QEt-Hg-SrH"/>
                                 </connections>
@@ -65,7 +74,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDj-Ju-Zfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="761" y="-1015"/>
+            <point key="canvasLocation" x="760.79999999999995" y="-1015.1424287856073"/>
         </scene>
         <!--Detail View Contoller-->
         <scene sceneID="Qdy-N6-qs3">
@@ -104,11 +113,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yzZ-on-QPD" id="9mN-ZL-UiQ">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N38-OC-rnW">
-                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -190,6 +199,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0VW-78-61z"/>
+        <segue reference="QEt-Hg-SrH"/>
     </inferredMetricsTieBreakers>
 </document>

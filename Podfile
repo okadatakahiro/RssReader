@@ -7,6 +7,9 @@ target 'RssReader' do
 
   # Pods for RssReader
   pod 'RealmSwift'
+  pod 'Ji', '~> 2.0.0'
+  pod 'SDWebImage', '~>3.8'
+
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

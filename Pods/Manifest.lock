@@ -1,17 +1,29 @@
 PODS:
+  - Ji (2.0.0):
+    - Ji/Ji (= 2.0.0)
+  - Ji/Ji (2.0.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (2.0.0)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - Ji (~> 2.0.0)
   - RealmSwift
+  - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
+  Ji: 79e11b5256ee809f9f7e51dc7de2059e35adf7a6
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 027cb5ec0d581ed992c84c91ca113774a9bdc75b
+PODFILE CHECKSUM: e96f389d7038ea0cbe057361f700351be48debdd
 
 COCOAPODS: 1.0.1
