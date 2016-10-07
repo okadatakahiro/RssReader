@@ -12,6 +12,11 @@ import RealmSwift
 class BookmarkViewController:UITableViewController {
     
     var bookmarks: Results<Bookmark>?
+    override  func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -47,6 +52,21 @@ class BookmarkViewController:UITableViewController {
             
             let controller = segue.destination as! DetailViewContoller
             controller.item = item
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            print("消えちゃった〜")
+            
+            let  realm = try! Realm()
+            try! realm.write {
+                realm.delete((bookmarks?[indexPath[1]])!)
+                
+                tableView.reloadData()
+                
+            }
         }
     }
 }
